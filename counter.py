@@ -12,8 +12,7 @@ def reset_count():
     DROP TABLE IF EXISTS Count;
 
     CREATE TABLE Count (
-        id  INTEGER PRIMARY KEY NOT NULL UNIQUE,
-        number  INTEGER
+        number  INTEGER PRIMARY KEY NOT NULL
     );
     ''')
     cur.execute('''INSERT OR IGNORE INTO Count (number) 
@@ -44,7 +43,8 @@ while True:
         minus_one()
         print(find_current())
         
-        quit()
     if inp == "restart": 
         reset_count()
         print(find_current())
+    if inp == "quit":
+        quit()
