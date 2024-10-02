@@ -17,7 +17,7 @@ def one_digit(digit):
         n = str(0)
         for b in stra:
             while int(n)<10:
-                rplist.append(stra.replace(stra[digit+1], n))
+                rplist.append(stra.replace(stra[digit], n))
                 n = str(int(n) + 1)
         count = 0
         for entry in rplist: 
